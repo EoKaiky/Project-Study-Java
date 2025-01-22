@@ -1,19 +1,25 @@
-import br.com.alura.screenmatch.modelos.Filme;
+import bt.com.alura.screenmatch.calculadora.CalculadoraTempo;
+import bt.com.alura.screenmatch.modelos.Filme;
+import bt.com.alura.screenmatch.modelos.Serie;
 
 public class Principal {
     public static void main(String[] args) {
         Filme meuFilme = new Filme();
+        Serie minhaSerie = new Serie();
         meuFilme.setNome("O poderoso chefão");
         meuFilme.setAnoDeLancamento(1970);
         meuFilme.setDuracaoEmMinutos(180);
 
-        meuFilme.exibeFichaTecnica();
-        meuFilme.avalia(8);
-        meuFilme.avalia(5);
-        meuFilme.avalia(10);
-        System.out.println(meuFilme.getSomaDasAvaliacoes());
-        System.out.println(meuFilme.getTotalDeAvaliacoes());
-        System.out.println(meuFilme.pegaMedia());
+        minhaSerie.setNome("Peaky Blnders");
+        minhaSerie.setAnoDeLancamento(2018);
+        minhaSerie.exibeFichaTecnica();
+        minhaSerie.setTemporadas(10);
+        minhaSerie.setEpisodiosTemporada(10);
+        minhaSerie.setMinutosEpisodio(50);
+        System.out.println("Duração para maratonar a série: " +minhaSerie.getDuracaoEmMinutos());
 
+        CalculadoraTempo calculo = new CalculadoraTempo();
+        calculo.inclui(meuFilme);
+        System.out.println(calculo.getTotalTemp());
     }
 }
