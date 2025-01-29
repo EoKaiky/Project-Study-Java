@@ -5,7 +5,7 @@ import bt.com.alura.screenmatch.calculadora.Classificavel;
 public class Episodio implements Classificavel {
     private int numero;
     private String nome;
-    private String Serie;
+    private Serie Serie;
     private int totalVisualizacoes;
 
     public int getTotalVisualizacoes() {
@@ -24,11 +24,11 @@ public class Episodio implements Classificavel {
         this.numero = numero;
     }
 
-    public String getSerie() {
+    public Serie getSerie() {
         return Serie;
     }
 
-    public void setSerie(String serie) {
+    public void setSerie(Serie serie) {
         Serie = serie;
     }
 
