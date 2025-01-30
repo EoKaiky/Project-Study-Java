@@ -50,6 +50,7 @@ public class Principal {
         filtro.filtra(episodio);
 
         var filmeDoPaulo = new Filme("DogVille", 2003);
+        filmeDoPaulo.setDiretor("murilodavid");
         filmeDoPaulo.setDuracaoEmMinutos(200);
         filmeDoPaulo.avalia(10);
 
@@ -60,6 +61,5 @@ public class Principal {
         System.out.println("Tamanho da lista " + listaDeFilmes.size());
         System.out.println("Primeiro filme " + listaDeFilmes.get(0).getNome());
         System.out.println(listaDeFilmes);
-
     }
 }

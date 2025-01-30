@@ -62,4 +62,8 @@ public class Titulo {
     public double pegaMedia(){
         return somaDasAvaliacoes / totalDeAvaliacoes;
     }
+
+    public String toString(){
+        return nome;
+    }
 }

@@ -20,7 +20,15 @@ public class PrincipalList {
         TitulosList.add(lost);
 
         for (Titulo item: TitulosList){
-            System.out.println(item);
+            System.out.println(item.getNome());
+            if(item instanceof Filme filme && filme.getClassificacao() > 2) {
+                System.out.println("Classificacao " + filme.getClassificacao());
+            } else {
+                System.out.println("Muito recomendado");
+            }
+
         }
+
+
     }
 }
