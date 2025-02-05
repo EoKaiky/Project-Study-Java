@@ -7,7 +7,7 @@ import br.com.alura.screenmatch.modelos.Titulo;
 import java.util.ArrayList;
 
 public class PrincipalList {
-    public static void main(String[] args){
+    public static void main(String[] args) {
         Filme meuFilme = new Filme("O poderoso chefão", 1970);
         var filmeDoPaulo = new Filme("DogVille", 2003);
         Filme outroFilme = new Filme("Avatar", 2023);
@@ -19,18 +19,17 @@ public class PrincipalList {
         TitulosList.add(outroFilme);
         TitulosList.add(lost);
 
-        for (Titulo item: TitulosList){
+        for (Titulo item: TitulosList) {
             System.out.println(item.getNome());
             if (item instanceof Filme filme && filme.getClassificacao() > 2){
                 System.out.println("Classificação " + filme.getClassificacao());
             }
-
         }
 
         ArrayList<String> buscaPorArtista = new ArrayList<>();
         buscaPorArtista.add("Adam Sandler");
         buscaPorArtista.add("Rafael");
+        buscaPorArtista.add("Murillo");
         buscaPorArtista.add("Kaiky");
-        buscaPorArtista.add("Bruno pipa");
     }
 }
