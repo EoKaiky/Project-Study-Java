@@ -20,7 +20,17 @@ public class PrincipalList {
         TitulosList.add(lost);
 
         for (Titulo item: TitulosList){
-            System.out.println(item);
+            System.out.println(item.getNome());
+            if (item instanceof Filme filme && filme.getClassificacao() > 2){
+                System.out.println("Classificação " + filme.getClassificacao());
+            }
+
         }
+
+        ArrayList<String> buscaPorArtista = new ArrayList<>();
+        buscaPorArtista.add("Adam Sandler");
+        buscaPorArtista.add("Rafael");
+        buscaPorArtista.add("Kaiky");
+        buscaPorArtista.add("Bruno pipa");
     }
 }
