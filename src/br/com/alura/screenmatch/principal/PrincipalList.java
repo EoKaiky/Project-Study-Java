@@ -4,9 +4,8 @@ import br.com.alura.screenmatch.modelos.Filme;
 import br.com.alura.screenmatch.modelos.Serie;
 import br.com.alura.screenmatch.modelos.Titulo;
 
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.Comparator;
+import java.lang.reflect.Array;
+import java.util.*;
 
 public class PrincipalList {
     public static void main(String[] args) {
@@ -15,7 +14,7 @@ public class PrincipalList {
         Filme outroFilme = new Filme("Avatar", 2023);
         Serie lost = new Serie("Lost", 2000);
 
-        ArrayList<Titulo> TitulosList = new ArrayList<>();
+        List<Titulo> TitulosList = new LinkedList<>();
         TitulosList.add(meuFilme);
         TitulosList.add(filmeDoPaulo);
         TitulosList.add(outroFilme);
@@ -28,7 +27,7 @@ public class PrincipalList {
             }
         }
 
-        ArrayList<String> buscaPorArtista = new ArrayList<>();
+        List<String> buscaPorArtista = new ArrayList<>();
         buscaPorArtista.add("Adam Sandler");
         buscaPorArtista.add("Rafael");
         buscaPorArtista.add("Murillo");
