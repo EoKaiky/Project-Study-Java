@@ -22,7 +22,8 @@ public class PrincipalBusca {
 
     String endereco = "https://www.omdbapi.com/?t=" + busca + "&apikey=b370b0c";
 
-    HttpRequest request = HttpRequest.newBuilder()
+   try {
+     HttpRequest request = HttpRequest.newBuilder()
             .uri(URI.create(endereco))
             .build();
         HttpResponse<String> response = client
@@ -37,14 +38,16 @@ public class PrincipalBusca {
         TituloOmdb meuTituloOmdb = gson.fromJson(json, TituloOmdb.class);
         System.out.println(meuTituloOmdb);
 
-        try {
+
             Titulo meuTitulo = new Titulo(meuTituloOmdb);
             System.out.println("Titulo já convertido: ");
             System.out.println(meuTitulo);
         } catch (NumberFormatException e) {
             System.out.println("Aconteceu um erro: ");
             System.out.println(e.getMessage());
-        }
+        } catch (IllegalArgumentException e) {
+       System.out.println("Algum erro de argumento na busca, verifique o endereço");
+   }
 
     }
 }
